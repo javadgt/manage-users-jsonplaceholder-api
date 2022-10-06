@@ -1,0 +1,70 @@
+h1{
+    text-align: center;
+}
+
+.users-header{
+    display: flex;
+    margin-top: 2rem;
+    justify-content: space-between;
+    // padding: 0 20px;
+    
+    .search-user{
+        all: unset;
+        padding: 4px 8px;
+        border-radius: .25rem;
+        border: 1px solid;
+        width: 30%;
+        height: 2rem;
+    }
+}
+
+.table{
+    text-align: center;
+    table {            
+        margin-top: 4rem;
+        width: 100%;   
+        box-shadow: 0 0 50px rgba(0, 0, 0, 0.236);
+        max-width: 100%;         
+        border-collapse: collapse;
+        cursor:default;
+    
+        th,td{
+            padding: 10px 7px;
+        }
+        td{
+            border-bottom: 1px solid #4E95F4;
+            text-align: center;
+        }
+        th{
+            background-color:#0AA;
+            border-bottom: 2px solid #44F;
+        }
+    
+        @each $row, $color in (even : rgba(0,0,0,.05), odd : #fff,) {
+            tr:nth-child(#{$row}) {
+                background-color: $color;
+            }
+        }
+    
+        tr:hover {
+            background-color: lightcyan;
+        }
+    
+        @each $icon, $color in (edit : rgb(201, 201, 66), trash : red,) {
+            i.fa-#{$icon}{
+                transition: .3s;
+                color: $color;
+                margin-left: 1rem;
+            }
+            i.fa-#{$icon}:hover{
+                filter: drop-shadow(2px 4px 10px $color);
+            }
+        }
+    
+        i.fa-trash{
+            margin-left: 0;
+        }
+    
+    
+    }
+}

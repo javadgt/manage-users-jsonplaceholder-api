@@ -1,0 +1,64 @@
+@font-face {
+  font-family: "BYekan";
+  src:  url(".././public/assets/fonts/BYekan-webfont.woff") format("woff"), url(".././public/assets/fonts/BYekan-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  direction: rtl;
+}
+
+:root{
+  --blue : #007bff;
+}
+#root{
+  display: flex;
+  min-height: 100vh;
+}
+
+body{
+  background-color: #e0e3e8;
+  font-family: 'BYekan';
+  font-size: 1.2rem;
+  color: #212529;
+
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+li::marker{
+  content: '';
+}
+
+img{
+  width: 100%;
+}
+ul{
+  padding: 0 !important;
+}
+i{
+  cursor: pointer;
+}
+
+
+//=======> content
+.content{
+  flex-grow: 1;
+  padding: 3rem;
+
+  i.toggle,.add-user{
+    cursor: pointer;
+    font-size: 1.4rem;
+    color: #fff;
+    background-color: #007bff;
+    padding: 10px 12px;
+    border-radius: .2rem;
+  }
+}
